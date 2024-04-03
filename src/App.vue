@@ -21,7 +21,7 @@ refs.value.push({
 	selected: false,
 });
 
-function triggerForm(targetId?: number) {
+function triggerForm(_targetId?: number) {
 
 }
 
@@ -37,7 +37,7 @@ function copyAll() {
 
 }
 
-function copy(targetId?: number) {
+function copy(_targetId?: number) {
 
 }
 </script>
@@ -48,7 +48,7 @@ function copy(targetId?: number) {
 		<!-- кнопки верхней панельки -->
 		<div class="row gx-3 wide-buttons">
 			<div class="col-auto">
-				<button class="btn btn-primary px-2" @click="triggerForm">Добавить источник</button>
+				<button class="btn btn-primary px-2" @click="triggerForm()">Добавить источник</button>
 			</div>
 		</div>
 
