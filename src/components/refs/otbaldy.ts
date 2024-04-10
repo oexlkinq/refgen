@@ -1,37 +1,32 @@
-import { RefBase, field } from "./refBase";
+import { basicRefType } from "./refBase";
 
-export class Otbaldy extends RefBase {
-    static type = [
+export const Otbaldy = {
+    type: [
         'Otbaldy',
-    ];
+    ],
 
-    static fields = {
+    fields: {
         title: {
             title: 'Название',
-            hint: 'Ченить более подробное про название',
+            hint: 'Ченить более подробное про название источника',
+            wiki: '/wiki/otbaldy#title_field',
             required: true,
-        } satisfies field,
+        },
         author: {
             title: 'Автор',
             hint: 'Автор. Формат: Фамилия И.О.',
+            wiki: '/wiki/otbaldy#author_field',
             required: true,
-        } satisfies field,
+        },
         url: {
             title: 'Ссылка',
             hint: 'Ссылка на источник',
-            required: true,
-        } satisfies field,
-    };
-
-    constructor(
-        public title: string,
-        public author: string,
-        public url: string,
-    ) {
-        super();
-    }
+            wiki: '/wiki/otbaldy#url_field',
+            required: false,
+        },
+    },
 
     toString(): string {
-        return `${this.title} - ${this.author} // ${this.url}`;
+        return `${this.fields.title.value} - ${this.fields.author.value}${(this.fields.url.value) ? ' // ' + this.fields.url.value : ''}`;
     }
-}
+} satisfies basicRefType;

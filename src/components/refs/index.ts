@@ -1,4 +1,4 @@
-import { RefBase, baseRefType } from "./refBase";
+import { basicRefType } from "./refBase";
 import { Otbaldy } from "./otbaldy";
 import { Otbaldy2 } from "./otbaldy2";
 
@@ -9,15 +9,15 @@ export type treeNode<dataType> = {
     },
 }
 
-type refTreeNode = treeNode<RefBase>;
+type refTreeNode = treeNode<basicRefType>;
 
 
 export const allRefsArray = [
     Otbaldy,
     Otbaldy2,
-] as baseRefType[];
+] as basicRefType[];
 
-export let allRefs = {} as refTreeNode;
+export let allRefs = {nodes: {}} as refTreeNode;
 
 for (const ref of allRefsArray) {
     let node = allRefs;
