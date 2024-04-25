@@ -11,6 +11,8 @@ import { Otbaldy2 } from './components/refs/otbaldy2';
 
 import Confirm from './components/confirm.vue';
 
+import { BIconPencil, BIconCopy } from 'bootstrap-icons-vue';
+
 
 const state = reactive({
 	formCallReason: 'add' as 'add' | 'edit',
@@ -161,10 +163,14 @@ function sortRefs(){
 				</div>
 				<div class="row justify-content-end">
 					<div class="col-auto">
-						<button class="btn btn-sm btn-secondary" @click="triggerForm(itemIndex)">ред.</button>
+						<button class="btn btn-sm btn-secondary" @click="triggerForm(itemIndex)">
+							<BIconCopy />
+						</button>
 					</div>
 					<div class="col-auto">
-						<button class="btn btn-sm btn-secondary" @click="copy(itemIndex)">[]</button>
+						<button class="btn btn-sm btn-secondary" @click="copy(itemIndex)">
+							<BIconPencil />
+						</button>
 					</div>
 				</div>
 			</div>

@@ -8,6 +8,9 @@ dependencies:
   bootstrap:
     specifier: ^5.3.3
     version: 5.3.3(@popperjs/core@2.11.8)
+  bootstrap-icons-vue:
+    specifier: ^1.11.3
+    version: 1.11.3
   vue:
     specifier: ^3.4.21
     version: 3.4.21(typescript@5.4.4)
@@ -528,6 +531,10 @@ packages:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
     dev: true
+
+  /bootstrap-icons-vue@1.11.3:
+    resolution: {integrity: sha512-Xba1GTDYon8KYSDTKiiAtiyfk4clhdKQYvCQPMkE58+F5loVwEmh0Wi+ECCfowNc9SGwpoSLpSkvg7rhgZBttw==}
+    dev: false
 
   /bootstrap@5.3.3(@popperjs/core@2.11.8):
     resolution: {integrity: sha512-8HLCdWgyoMguSO9o+aH+iuZ+aht+mzW0u3HIMzVu7Srrpv7EBBxTnrFlSCskwdY1+EOFQSm7uMJhNQHkdPcmjg==}
